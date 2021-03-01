@@ -1,0 +1,14 @@
+{
+  "name": "slav",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "r": "node index.js"
+  },
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "moment-timezone": "^0.5.33",
+    "node-fetch": "^2.6.1"
+  }
+}
