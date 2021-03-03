@@ -10,6 +10,7 @@ const Discord = require('discord.js');
 const tool = require('./tool');
 const fetch = require('node-fetch');
 const config = require('./config.json');
+const token = (isLocal)? config.token : process.env.token;
 const client = new Client({ ws: { intents: Intents.ALL }, partials : ['MESSAGE', 'CHANNEL', 'REACTION', 'GUILD_MEMBER', 'USER'] });
 const prefix = '^^;';
 
@@ -209,4 +210,4 @@ client.on('message', async message => {
 });
 
 
-client.login(config.token);
+client.login(token);
