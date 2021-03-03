@@ -11,7 +11,6 @@ const tool = require('./tool');
 const fetch = require('node-fetch');
 const config = require('./config.json');
 const client = new Client({ ws: { intents: Intents.ALL }, partials : ['MESSAGE', 'CHANNEL', 'REACTION', 'GUILD_MEMBER', 'USER'] });
-const token = config.token;
 const prefix = '^^;';
 
 
@@ -210,4 +209,4 @@ client.on('message', async message => {
 });
 
 
-client.login(token);
+client.login(config.token);
