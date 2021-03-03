@@ -9,8 +9,7 @@ const { Client, Intents } = require('discord.js');
 const Discord = require('discord.js');
 const tool = require('./tool');
 const fetch = require('node-fetch');
-const config = require('./config.json');
-const token = (isLocal)? config.token : process.env.token;
+const token = (isLocal)? require('./config.json').token : process.env.token;
 const client = new Client({ ws: { intents: Intents.ALL }, partials : ['MESSAGE', 'CHANNEL', 'REACTION', 'GUILD_MEMBER', 'USER'] });
 const prefix = '^^;';
 
